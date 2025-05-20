@@ -69,7 +69,8 @@
 
     // URLs de video
     const cameraHLS = 'http://localhost:8888/camerahik/index.m3u8';
-    const youtubeLive = 'https://youtube.com/live/qTepYidj5Go?autoplay=1';
+    const youtubeLive = 'https://www.youtube.com/embed/qTepYidj5Go?autoplay=1';
+
 
 
     // Función para cargar video HLS
@@ -108,16 +109,17 @@
     }
 
         // Función para cargar video YouTube (iframe)
-    function cargarVideoYouTube() {
-      const iframe = document.createElement('iframe');
-      iframe.setAttribute('src', 'https://www.youtube.com/embed/SyBMIASO2H4?autoplay=1');
-      iframe.setAttribute('frameborder', '0');
-      iframe.setAttribute('allow', 'autoplay; encrypted-media');
-      iframe.setAttribute('allowfullscreen', '');
-      iframe.style.width = '100%';
-      iframe.style.height = '360px';
-      return iframe;
+      function cargarVideoYouTube() {
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('src', youtubeLive);
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute('allow', 'autoplay; encrypted-media');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.style.width = '100%';
+        iframe.style.height = '360px';
+        return iframe;
     }
+
 
 
     // Intentar cargar cámara primero, si falla, cargar YouTube
